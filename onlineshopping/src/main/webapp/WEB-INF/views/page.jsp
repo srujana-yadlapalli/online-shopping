@@ -50,15 +50,20 @@
 			<c:if test="${userClickHome == true}">
 				<%@include file="./shared/home.jsp"%>
 			</c:if>
-            
-            <!-- Loading only when user clicks about -->
+
+			<!-- Loading only when user clicks about -->
 			<c:if test="${userClickAbout == true}">
 				<%@include file="./shared/about.jsp"%>
 			</c:if>
-            
-            <!-- Loading only when user clicks contact -->
+
+			<!-- Loading only when user clicks contact -->
 			<c:if test="${userClickContact == true}">
 				<%@include file="./shared/contact.jsp"%>
+			</c:if>
+			
+			<!-- Loading only when user clicks contact -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts== true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 
 		</div>
